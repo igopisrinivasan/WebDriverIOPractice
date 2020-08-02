@@ -1,0 +1,23 @@
+{
+  "name": "WebDriverIOPractice",
+  "version": "1.0.0",
+  "description": "WebDriverIO Practice Project with Version 6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igopisrinivasan/WebDriverIOPractice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igopisrinivasan/WebDriverIOPractice/issues"
+  },
+  "homepage": "https://github.com/igopisrinivasan/WebDriverIOPractice#readme",
+  "dependencies": {
+    "yarn": "^1.22.4"
+  }
+}
