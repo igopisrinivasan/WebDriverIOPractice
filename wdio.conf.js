@@ -1,3 +1,9 @@
+const host = '127.0.0.1';   // default appium host
+const port = 4730;          // default appium port
+
+const waitforTimeout = 30 * 60000;
+const commandTimeout = 30 * 60000;
+
 exports.config = {
     //
     // ====================
@@ -47,18 +53,17 @@ exports.config = {
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
     capabilities: [{
-    
-        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-        // grid with only 5 firefox instances available you can make sure that not more than
-        // 5 instances get started at a time.
-        maxInstances: 5,
-        //
-        browserName: 'chrome',
-        acceptInsecureCerts: true
-        // If outputDir is provided WebdriverIO can capture driver session logs
-        // it is possible to configure which logTypes to include/exclude.
-        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-        // excludeDriverLogs: ['bugreport', 'server'],
+        //appiumVersion: '1.8.1',                 // Appium module version
+        browserName: '',                        // browser name is empty for native apps
+        platformName: 'Android',
+        app: './app/LGCalculator.apk',          // Path to your native app
+        appPackage: 'com.android.calculator2',  // Package name of your app
+        appActivity: 'com.android.calculator2.Calculator', // App activity of the app
+        platformVersion: '10.0.0',              // Android platform version of the device
+        deviceName: 'emulator-5554',              // device name of the mobile device
+        waitforTimeout: waitforTimeout,
+        commandTimeout: commandTimeout,
+        newCommandTimeout: 30 * 60000,
     }],
     //
     // ===================
